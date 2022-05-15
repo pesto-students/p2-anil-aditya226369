@@ -36,6 +36,12 @@ Music Player easy, understandable UI/UX
 Libraries the project using: google/icons
 
 
+## Code Output
+
+Assignment 2 Output:
+![Assignment-2 Output](https://user-images.githubusercontent.com/27343380/168489326-8d56ad68-21f8-41e3-be7b-ab32868c56fb.png)
+
+
 
 ## How to use?
 
