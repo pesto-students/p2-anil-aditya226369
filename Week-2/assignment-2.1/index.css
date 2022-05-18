@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 0.8fr 1fr 1fr 1fr 2fr;
+    row-gap: 5px;
+    column-gap: 5px;
+    grid-template-areas: 
+    "header header"
+    "content1 content2"
+    "img content3"
+    "img content4"
+    "form form";
+}
+
+.block_text--header{
+    /* border:2px blue solid; */
+    grid-area: header;    
+    display: grid;
+    place-content: center;
+}
+
+.block_text--content1 {
+    /* border:2px blue solid; */
+    grid-area: content1;
+    display: grid;
+    place-content: center;
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.534);
+  }
+
+  .block_text--content2 {
+    /* border:2px blue solid; */
+    grid-area: content2;
+    display: grid;
+    place-content: center;
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.534);
+  }
+
+  .block_text--content3 {
+    /* border:2px blue solid; */
+    grid-area: content3;
+    display: grid;
+    place-content: center;
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.534);
+    
+  }
+  .block_text--content4 {
+    /* border:2px blue solid; */
+    grid-area: content4;
+    display: grid;
+    place-content: center;
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.534);
+  }
+
+  .block__text--para{
+      margin-top: 8px;
+  }
+
+.block_text--form{
+    /* border:2px blue solid; */
+    grid-area: form;
+    display: grid;
+    place-content: center;
+}
+
+.form__card{
+    /* box-shadow: 10px 0 10px 0 black; */
+    border: 2px solid blue;
+    margin: 10px;
+    display: grid;
+    place-content: center;
+    /* text-align: center; */
+}
+
+.form__card > h3{
+    padding: 10px;
+}
+
+.form__checkbox{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.form__checkbox--box{
+    padding: 5px 20px 5px 20px;
+}
+
+.form__input{
+    padding: 5px;
+}
+
+.form__input input,select{
+    /* background-color: aqua; */
+    width: 40%;
+}
+
+.block_text--img{
+    grid-area: img;
+    display: grid;
+    place-content: center;
+}
+
+.img--responsive{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+      display: grid;
+      background-color: aqua;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.4fr 0.8fr 0.8fr 1.4fr 0.8fr 0.8fr 1.4fr;
+      grid-template-areas: 
+      "header"
+      "content1"
+      "content2"
+      "img"
+      "content3"
+      "content4"
+      "form";
+
+    }
+  }
+
