@@ -12,7 +12,8 @@
 <body>
     <div class="container">
         <div class="block_text--header">
-            <h1>Lorem Ipsum</h1>
+            <h1 style="text-align: center;">Lorem Ipsum</h1>
+            <hr style="width: 80vw; margin-top: 20px;">
         </div>
         <div class="block_text--content1">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sollicitudin facilisis arcu ac vestibulum.
@@ -27,7 +28,7 @@
             metus ex molestie justo, sed fringilla quam odio a augue. Proin porta tortor et diam pretium ullamcorper.
         </div>
         <div class="block_text--img">
-            <img src="img.jpeg" alt="image" class="img--responsive" height="200" width="500" />
+            <img src="img.jpeg" alt="image" class="img--responsive"/>
         </div>
         <div class="block_text--content3">
             <span><b>Lorem ipsum dolor sit amet</b></span>
@@ -53,7 +54,7 @@
         </div>
         <div class="block_text--form">
             <div class="form__card">
-                <h3><span>FORM</span></h3>
+                <h3 style="text-align: center;"><span>FORM</span></h3>
                 <hr style="width: 80%; margin: auto;">
                 <div class="form__checkbox">
                     <div class="form__checkbox--box">
@@ -103,9 +104,12 @@
                         <option value="uk">UK</option>
                     </select>
                 </div>
-                <div class="form__input form__agree">
-                    <input name="terms" type="checkbox" style="float: left; width: auto;margin-left: 50px;">
+                <div class="form__input form__agree" style="margin: 10px;">
+                    <input name="terms" type="checkbox" style="float: left; width: auto;margin: 0 10px 0 10px;">
                     <label for="terms">I agree to the <a href="#" style="color: blue;">terms and conditions.</a></label>
+                </div>
+                <div class="form__input--button" style="text-align: center;padding: 10px;">
+                    <button type="button" name="submit">Submit</button>
                 </div>
             </div>
 

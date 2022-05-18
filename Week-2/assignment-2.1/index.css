@@ -7,7 +7,7 @@
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 0.8fr 1fr 1fr 1fr 2fr;
+    grid-template-rows: 0.5fr 0.8fr 0.8fr 0.8fr 2fr;
     row-gap: 5px;
     column-gap: 5px;
     grid-template-areas: 
@@ -19,14 +19,12 @@
 }
 
 .block_text--header{
-    /* border:2px blue solid; */
     grid-area: header;    
     display: grid;
     place-content: center;
 }
 
 .block_text--content1 {
-    /* border:2px blue solid; */
     grid-area: content1;
     display: grid;
     place-content: center;
@@ -35,7 +33,6 @@
   }
 
   .block_text--content2 {
-    /* border:2px blue solid; */
     grid-area: content2;
     display: grid;
     place-content: center;
@@ -44,7 +41,6 @@
   }
 
   .block_text--content3 {
-    /* border:2px blue solid; */
     grid-area: content3;
     display: grid;
     place-content: center;
@@ -53,7 +49,6 @@
     
   }
   .block_text--content4 {
-    /* border:2px blue solid; */
     grid-area: content4;
     display: grid;
     place-content: center;
@@ -66,19 +61,17 @@
   }
 
 .block_text--form{
-    /* border:2px blue solid; */
     grid-area: form;
     display: grid;
     place-content: center;
 }
 
 .form__card{
-    /* box-shadow: 10px 0 10px 0 black; */
-    border: 2px solid blue;
     margin: 10px;
     display: grid;
     place-content: center;
-    /* text-align: center; */
+    border: 2px solid black;
+    padding: 0 20px 0 20px;
 }
 
 .form__card > h3{
@@ -100,7 +93,6 @@
 }
 
 .form__input input,select{
-    /* background-color: aqua; */
     width: 40%;
 }
 
@@ -112,16 +104,21 @@
 
 .img--responsive{
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     height: auto;
+}
+
+.form__input--button button{
+    background-color: green;
+    color: white;
+    padding: 2px 20px 2px 20px;
 }
 
 @media only screen and (max-width: 768px) {
     .container {
       display: grid;
-      background-color: aqua;
       grid-template-columns: 1fr;
-      grid-template-rows: 0.4fr 0.8fr 0.8fr 1.4fr 0.8fr 0.8fr 1.4fr;
+      grid-template-rows: 0.4fr 0.5fr 0.5fr 1.4fr 0.5fr 0.5fr 2fr;
       grid-template-areas: 
       "header"
       "content1"
