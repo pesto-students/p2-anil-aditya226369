@@ -29,28 +29,32 @@
     width: 50%;
     background-color: red;
     float: left;
-    transition: transform 0.5s;
+    transform: rotate(0deg);
+    transition: 1s;
 }
 .blue{
     height: 50%;
     width: 50%;
     background-color: blue;
     float: left;
-    transition: transform 0.5s;
+    transform: rotate(0deg);
+    transition: 1s;
 }
 .green{
     height: 50%;
     width: 50%;
     background-color: green;
     float: left;
-    transition: transform 0.5s;
+    transform: rotate(0deg);
+    transition: 1s;
 }
 .yellow{
     height: 50%;
     width: 50%;
     background-color: yellow;
     float: left;
-    transition: transform 2s ;
+    transform: rotate(0deg);
+    transition: 1s;
 }
 
 
@@ -60,19 +64,24 @@
     transition-timing-function: ease-in-out;
     transform: rotate(90deg);
     transform-origin: top left;
+    transition: transform 1s;
 }
 
 .main:hover .green {
     transform: rotate(-90deg);
     transform-origin: bottom left;
+    transition: transform 1s;
 }
 
 .main:hover .blue {
     transform: rotate(-90deg);
     transform-origin: top right;
+    transition: transform 1s;
 }
 
 .main:hover .yellow {
     transform: rotate(90deg);
     transform-origin: bottom right;
+    transition: transform 1s;
 }
+
