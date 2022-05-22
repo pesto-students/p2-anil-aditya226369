@@ -100,11 +100,23 @@ header{
 
 .form__input input, select{
     width: 40%;
+    float: right;
+}
+
+.form__agree  input{
+    float: left;
+    width: auto;
+    margin: 0 10px 0 10px;
 }
 
 .form__input input:hover{
     border: 2px solid blue;
     width: 40%;
+}
+
+.form__input--button{
+    text-align: center;
+    padding: 10px;
 }
 
 .form__input select:hover{
@@ -141,6 +153,11 @@ footer{
     padding: 10px;
     height: 10vh;
     margin-top: 10px;
+}
+
+.footer__text{
+    border: 2px solid white;
+    padding: 5px;
 }
 
 @media only screen and (max-width: 768px) {
