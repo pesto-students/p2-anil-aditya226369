@@ -6,8 +6,6 @@ function memoize(fn){
     const cache = new Map();
     return function(...args){
         const key = args.toString();
-        console.log("fn called with key: "+key)
-        console.log(cache)
         if(cache.has(key)){
             return cache.get(key);
         }
