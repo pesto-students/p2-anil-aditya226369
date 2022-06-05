@@ -1,6 +1,6 @@
 // Fabonacci series using javascript iterables
 
-const fabonacci = {
+var fabonacci = {
     [Symbol.iterator](){
         let beforeBefore = 1;
         let before = 0;
