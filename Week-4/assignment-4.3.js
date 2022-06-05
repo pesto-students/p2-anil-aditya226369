@@ -2,14 +2,14 @@
 
 var fabonacci = {
     [Symbol.iterator](){
-        let beforeBefore = 1;
+        let previous = 1;
         let before = 0;
         let sum = 0;
         return {
             next() {
 
                 // here the previous variable is assign to next variable
-                [sum,before,beforeBefore] = [before,beforeBefore,before+beforeBefore];
+                [sum,before,previous] = [before,previous,before+previous];
                 return {
                     // here we are returning the value as sum
                     value:sum,
