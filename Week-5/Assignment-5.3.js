@@ -12,8 +12,8 @@ const hasDuplicate=(arr)=>{
     return false;
 }
 
-const arrT = [1,2,3,4]; //Test1: returns true
-const arrF = [1,-1,1,3]; //Test2: return false 
+const arrT = [1,2,3,4]; //Test1: no duplicate returns false
+const arrF = [1,-1,1,3]; //Test2: contains duplicate returns true
 
 console.log("Test for arrT which doen't have duplicate values: ");
 console.log(hasDuplicate(arrT));
