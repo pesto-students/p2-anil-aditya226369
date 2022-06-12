@@ -1,12 +1,21 @@
 const mathOperations = {
     sum: function(a,b){
-        return a+b;
+        if(typeof(a)=="number" && typeof(b)=="number"){
+            return a+b;
+        }
+        return "Input parameters are not numbers";
     },
     diff: function(a,b){
-        return a-b;
+        if(typeof(a)=="number" && typeof(b)=="number"){
+            return a-b;
+        }
+        return "Input parameters are not numbers";
     },
     product: function(a,b){
-        return a*b;
+        if(typeof(a)=="number" && typeof(b)=="number"){
+            return a*b;
+        }
+        return "Input parameters are not numbers";
     }
 }
 
