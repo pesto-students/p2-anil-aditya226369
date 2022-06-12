@@ -10,7 +10,7 @@ describe("Math Operations Test: ", ()=>{
     test("Test for product of 3 * 2 should return 6 ",()=>{
         expect(mathOperations.product(3,2)).toBe(6);
     }),
-    test("Neagtive Test for add of string '3' + '2' should return '23' which is not correct so shows message 'Input parameters are not numbers' ",()=>{
+    test("Negative Test for add of string '3' + '2' should return '23' which is not correct so shows message 'Input parameters are not numbers' ",()=>{
         expect(mathOperations.sum('3','2')).toBe("Input parameters are not numbers");
     });
 });
