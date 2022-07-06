@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(
+      90deg,
+      rgba(241, 44, 9, 0.959) 0%,
+      rgb(190, 240, 8) 100%
+    );
+  }
+  .todo_app {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 50vw;
+    min-height: 75vh;
+    background: black;
+    text-align: center;
+    margin: 50px auto;
+    border-radius: 10px;
+    padding-bottom: 10px;
+  }
+  
+  h1 {
+    margin: 32px 0;
+    color: white;
+    font-size: 24px;
+  }
+  
+  .todo_form {
+    margin-bottom: 100px;
+    text-align: center;
+  }
+  
+  .todo_input {
+    padding: 14px 32px 14px 16px;
+    border-radius: 4px 0 0 4px;
+    border: 2px solid #5d0cff;
+    outline: none;
+    width: 50%;
+    background: transparent;
+    color: white;
+  }
+  
+  .todo_input::placeholder {
+    color: white;
+  }
+  
+  .todo_button {
+    padding: 16px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    outline: none;
+    background: linear-gradient(
+      90deg,
+      rgba(93, 12, 255, 1) 0%,
+      rgba(155, 0, 250, 1) 100%
+    );
+    color: #fff;
+    text-transform: capitalize;
+  }
+  
+  .todo_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px auto;
+    color: #fff;
+    background: linear-gradient(
+        90deg,
+        rgba(20, 159, 255, 1) 0%,
+        rgb(5, 70, 155) 100%
+    );
+  
+    padding: 16px;
+    border-radius: 5px;
+    width: 80%;
+  }
+  
+  
+  .icons {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .delete_icon {
+    margin-right: 5px;
+    color: #fff;
+  }
+
+  .status_text_pending{
+    padding-right:10px ;
+    color: rgba(15, 228, 15, 0.904);
+    font-size: 20px;
+    text-shadow: 2px 2px darkgreen;
+  }
+  .status_text_complete{
+    padding-right:10px ;
+    color: rgb(140, 146, 140);
+    font-size: 20px;
+    text-shadow: 2px 2px black;
+  }
+  
