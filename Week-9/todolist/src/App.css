@@ -96,6 +96,10 @@
     color: #fff;
   }
 
+  .checkBox{
+    margin-left: 10px;
+  }
+
   .status_text_pending{
     padding-right:10px ;
     color: rgba(15, 228, 15, 0.904);

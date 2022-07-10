@@ -3,8 +3,8 @@ import Todoform from './Todoform'
 import Todo from './Todo';
 
 function TodoList() {
-    const [todos,setTodo] = useState([]);
-    const addTodo = todo =>{
+    const [todos,setTodo] = useState([]); // used state here to get todo list state
+    const addTodo = todo =>{ // this function add todo into the updated state
         if(!todo.text){
             return;
         }
@@ -12,12 +12,12 @@ function TodoList() {
         setTodo(newTodo);
     }
 
-    const removeTodo = id =>{
+    const removeTodo = id =>{ // this function removes a particular todo from list
         const removeArr = [...todos].filter(todo=>todo.id!==id);
         setTodo(removeArr);
     }
 
-    const completeTodo = id =>{
+    const completeTodo = id =>{ // this function change the pending state to complete by just toggle
         let updatedTodos = todos.map(todo=>{
             if(todo.id === id){
                 todo.isComplete = !todo.isComplete;
@@ -36,4 +36,4 @@ function TodoList() {
   )
 }
 
-export default TodoList
+export default TodoList;

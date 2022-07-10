@@ -13,7 +13,7 @@ function Todoform(props) {
             return;
         }
         props.onSubmit({
-            id: Math.random(),
+            id: Math.random(), // for unique id generation
             text: input
         });
         setInput('');
