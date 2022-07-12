@@ -14,8 +14,8 @@ function AddTodo() {
 
     const removeTodo = id =>{ // this function removes a particular todo from list
         const removeArr = [...todos].filter(todo=>todo.id!==id);
+        
         setTodo(removeArr);
-        console.log(todos);
     }
 
     const checkedTodo = id =>{ // this function change the pending state to complete by just toggle

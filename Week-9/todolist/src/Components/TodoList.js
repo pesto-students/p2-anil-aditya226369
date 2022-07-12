@@ -9,7 +9,7 @@ function TodoList({ todos, checkedTodo, removeTodo }) {
       <div className="icons">
       <div className={todo.flag ? "status_text_complete" : "status_text_pending"} /* this tells wheather the state is pending or completed */ >
         {todo.flag ? "Completed" : "Pending"} 
-        <input className="checkBox" type="checkbox" onClick={()=>checkedTodo(todo.id)} defaultChecked={todo.flag? true:false}/* this toggles the state between pending or completed */ />
+        <input className="checkBox" type="checkbox" onClick={()=>checkedTodo(todo.id)} checked = {todo.flag}/* this toggles the state between pending or completed */ />
       </div>
         <RiCloseCircleLine
           onClick={() => removeTodo(todo.id)} //removes a particular todo from list
