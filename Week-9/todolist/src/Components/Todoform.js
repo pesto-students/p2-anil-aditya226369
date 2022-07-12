@@ -14,7 +14,8 @@ function Todoform(props) {
         }
         props.onSubmit({
             id: Math.random(), // for unique id generation
-            text: input
+            text: input,
+            flag: false
         });
         setInput('');
     }
