@@ -1,7 +1,7 @@
 import React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-function Urlshortner({ listData, removeData }) {
+function Urllist({ listData, removeData }) {
   return listData.map((item, index) => (
     <div key={index} className="url_row">
       <div className="url_text" key={item.id}>
@@ -26,4 +26,4 @@ function Urlshortner({ listData, removeData }) {
   ));
 }
 
-export default Urlshortner;
+export default Urllist;

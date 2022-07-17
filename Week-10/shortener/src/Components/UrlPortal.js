@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../App.css';
-import UrlEntryForm from './UrlEntryForm';
-import Urlshortner from './Urlshortner';
+import UrlEntryForm from './GettingUrl';
+import Urllist from './Urllist';
 
 function Display() {
   const [list, setList] = useState([]);
@@ -17,7 +17,7 @@ function Display() {
   return (
     <div className="display_form-data">
       <UrlEntryForm urlShorten={urlFromForm} />
-      <Urlshortner listData={list} removeData={removeUrlData} />
+      <Urllist listData={list} removeData={removeUrlData} />
     </div>
   );
 }
