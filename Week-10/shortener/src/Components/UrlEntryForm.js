@@ -6,23 +6,16 @@ function UrlEntryForm(props) {
   function changeHandler(event) {
     setUrl(event.target.value);
   }
-  function getApi(link) {
-    if(link.trim().length===0) return;
-    fetch('https://api.shrtco.de/v2/shorten?url=' + link)
-      .then((res) => res.json())
-      .then((op) =>
-        props.urlShorten({
-          id: Math.random().toString(),
-          main: link,
-          data: op.result.short_link,
-          loading: false,
-        })
-      );
-  }
-
-  function shortenUrlHandler(event) {
+ 
+  async function shortenUrlHandler(event) {
     event.preventDefault();
-    getApi(url);
+    const dat = await fetch('https://api.shrtco.de/v2/shorten?url=' + url);
+    const dat1 = await dat.json();
+    props.urlShorten({
+      id: Math.random().toString(),
+      data: dat1.result.short_link,
+      main: url,
+    });
     setUrl('');
   }
 

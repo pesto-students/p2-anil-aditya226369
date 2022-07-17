@@ -68,19 +68,40 @@ body {
   width: 100%;
 }
 
-.url_button {
+.url_button--copy {
   padding: 8px;
+  margin-left: 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   outline: none;
-  background: linear-gradient(
-    90deg,
-    rgba(93, 12, 255, 1) 0%,
-    rgba(155, 0, 250, 1) 100%
-  );
+  background-color:green;
   color: #fff;
   text-transform: capitalize;
+}
+.url_button--remove {
+  padding: 8px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  background-color:red;
+  color: #fff;
+  text-transform: capitalize;
+}
+.close {
+  background-color: transparent;
+  font-size: 15px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
 }
 
 .icons {

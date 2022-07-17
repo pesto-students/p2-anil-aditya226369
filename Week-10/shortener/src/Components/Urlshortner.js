@@ -1,28 +1,26 @@
 import React from 'react';
-import { RiCloseCircleLine } from 'react-icons/ri';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 function Urlshortner({ listData, removeData }) {
   return listData.map((item, index) => (
     <div key={index} className="url_row">
       <div className="url_text" key={item.id}>
-        <div>{item.main}</div>
+        <span>{item.main}</span>
       </div>
       <div className="icons">
-        <div className="icons-text">{item.data}</div>
+        <span className="icons-text">{item.data}</span>
         <div>
           <CopyToClipboard text={item.data}>
-            <button className="url_button">
+            <button className="url_button--copy">
               Copy
             </button>
           </CopyToClipboard>
         </div>
-        <div className="delete_icon--div">
-          <RiCloseCircleLine
-            onClick={() => removeData(item.id)}
-            className="delete_icon"
-          />
-        </div>
+        <icon className="delete_icon--div" alt='remove data icon'>
+          <button className="url_button--remove" onClick={() => removeData(item.id)}>
+              Remove
+            </button>
+        </icon>
       </div>
     </div>
   ));
