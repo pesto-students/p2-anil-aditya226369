@@ -1,0 +1,25 @@
+.toggle_button {
+  display: flex;
+  justify-content: center;
+  background-color: green;
+  color: white;
+}
+
+.main_view {
+  display: grid;
+  place-content: center;
+  height: 90vh;
+  width: 100vw;
+}
+
+.content {
+  display: grid;
+  place-content: center;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+  height: 90vh;
+  width: 50vw;
+}

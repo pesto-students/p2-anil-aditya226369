@@ -1,0 +1,63 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.toggle{
+  align-self: center;
+}
+.mainView{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.assingment1{
+  display: grid;
+  place-content: center;
+}
+.main{
+  display: grid;
+  place-content: center;
+  height: 90vh;
+  width: 50vw;
+}
+
+.room {
+  text-align: center;
+}
+
+
+.lit {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.App {
+  display: grid;
+  place-content: center;
+  height: 90vh;
+  width: 100vw;
+}
+
+.button_div {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin-top: 10px;
+  background: linear-gradient(45deg, lightGreen, green);
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+
