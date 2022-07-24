@@ -28,7 +28,7 @@ Articles with easy, understandable UI/UX
 
 ## Code Example
 
-Project is using Reactjs hook like {useState}
+Project is using Reactjs hook like {useState,useSelector,useDispatcher}
 
 
 ## Code Output
