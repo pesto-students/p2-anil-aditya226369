@@ -17,7 +17,7 @@ MySql
 
 **Built with**
 
--   VS Code
+-   MySql client
 
 ## Features
 
