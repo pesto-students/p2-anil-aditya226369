@@ -33,6 +33,9 @@ Project is using MySql Database
 Assignment Output:
 please find attached pdfs for better understanding 
 
+![schema](https://user-images.githubusercontent.com/27343380/182034035-81b2b26f-05e2-4f1b-aefc-61217f877886.PNG)
+
+
 
 ## Credits
 
