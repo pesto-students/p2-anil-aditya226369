@@ -7,7 +7,7 @@ signup : pass the data in body and get the userId and key,
 update : update the data on the basis of key,  
 portfolio : get all information of your account,  
 delete : delete the data with key,  
-addexpense : update the expenses,  
+addexpense : add the expenses,  
 byyear : filter the expenses by year,  
 bymonth : fiter the expenses by month  
 
@@ -39,7 +39,7 @@ You can do following thinks with this repository:
 /update : update the data on the basis of key,  
 /portfolio : get all information of your account,  
 /delete : delete the data with key,  
-/addexpense : update the expenses,  
+/addexpense : add the expenses,  
 /byyear : filter the expenses by year,  
 /bymonth : fiter the expenses by month  
 
