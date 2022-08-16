@@ -2,7 +2,6 @@ const db  = require('./dbConnection');
 
 
 const express = require("express");
-const request = require("request");
 
 const app = express();
 let login = false;
@@ -15,7 +14,7 @@ app.get("/",(req,res)=>{
     /update : update the data on the basis of key,
     /portfolio : get all information of your account,
     /delete : delete the data with key,
-    /updateexpense : update the expenses,
+    /addexpense : update the expenses,
     /byyear : filter the expenses by year,
     /bymonth : fiter the expenses by month` );
 })
@@ -54,10 +53,10 @@ app.get("/delete",(req,res)=>{
 
 app.get("/portfolio",(req,res)=>{
     const key = req.query.key;
-    {login ? db.showData(key).then((ele)=>res.send(ele)) : res.send("You are not logged in")}
+    {login ? db.showData(key).then((ele)=>res.json(ele)) : res.send("You are not logged in")}
 })
 
-app.post("/updateexpense",(req,res)=>{
+app.post("/addexpense",(req,res)=>{
     const key = req.query.key;
     const pnl = req.body;
     {login ? db.updatePnl(key,pnl).then((item)=>{
@@ -88,13 +87,13 @@ app.get("/bymonth",(req,res)=>{
     const month = req.query.month;
     const result = []
     {login ? db.showData(key).then((ele)=>
-    (res.send(
+    (
         ele[0].pnl.map((item)=>{
             if(item.month == month){
                 result.push(item);
             }
         }),
-        res.send(result)))) : res.send("You are not logged in")}
+        res.send(result))) : res.send("You are not logged in")}
 })
 
 app.listen(3000,()=>{

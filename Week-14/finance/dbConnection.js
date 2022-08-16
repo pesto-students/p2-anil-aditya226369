@@ -28,16 +28,7 @@ const financeSchema = new mongoose.Schema({
 })
 const FinanceData = new mongoose.model("Finance",financeSchema);
 let login = false;
-// fetching database 
-const fetchData = async(key)=>{
-    try{
-        const show = await FinanceData.find({key:key});
-        return show;
-    }catch(err){
-        console.log("Error occured in showing Data: "+err);
-        return err;
-    }
-}
+
 
 // add data to database
 const addData = async(name,assests,fixed_income,liabilities,expenses)=>{
