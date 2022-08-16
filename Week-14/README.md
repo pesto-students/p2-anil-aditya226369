@@ -7,7 +7,7 @@ signup : pass the data in body and get the userId and key,
 update : update the data on the basis of key,  
 portfolio : get all information of your account,  
 delete : delete the data with key,  
-updateexpense : update the expenses,  
+addexpense : update the expenses,  
 byyear : filter the expenses by year,  
 bymonth : fiter the expenses by month  
 
