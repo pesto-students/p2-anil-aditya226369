@@ -80,6 +80,8 @@ Factory pattern , Observer pattern , Builder pattern
 
 Assignment Output:
 please find attached pdfs for better understanding 
+code and design : https://www.loom.com/share/7e4f8d2bdee641459034c5ab0d7703db
+postman collections : https://www.loom.com/share/2757f35018ed4ecca617540469b0c517
 
 
 

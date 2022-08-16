@@ -41,7 +41,9 @@ app.post("/signup",(req,res)=>{
 app.post("/update",(req,res)=>{
     const key = req.query.key;
     const body = req.body;
-    {login ? db.updateData(key,{assests:body.assets,fixed_income:body.fixed_income,liabilities:body.liabilities,expenses:body.expenses}).then((ele)=>res.send("Updated successfully")) : res.send("You are not logged in")}
+    {login ? db.updateData(key,{assests:body.assets,fixed_income:body.fixed_income,liabilities:body.liabilities,expenses:body.expenses}).then((ele)=>{
+        ele.matchedCount > 0 ? res.send("Updated successfully") : res.send("No data found for key: "+key)
+    }) : res.send("You are not logged in")}
 })
 
 app.get("/delete",(req,res)=>{
@@ -87,7 +89,7 @@ app.get("/bymonth",(req,res)=>{
     const month = req.query.month;
     const result = []
     {login ? db.showData(key).then((ele)=>
-    (
+    ( 
         ele[0].pnl.map((item)=>{
             if(item.month == month){
                 result.push(item);

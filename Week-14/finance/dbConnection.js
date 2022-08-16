@@ -78,12 +78,11 @@ const showData = async(key)=>{
 const updateData = async(key,{name:name,assests:assests,fixed_income:fixed_income,liabilities:liabilities,expenses:expenses})=>{
     
     const getData = await showData(key);
-    console.log(getData);
     const nname = name || getData.name;
-    const nassests = assests || getData[0].information.assests;
-    const nfixed_income = fixed_income || getData[0].information.fixed_income;
-    const nliabilities = liabilities || getData[0].information.liabilities;
-    const nexpenses = expenses || getData[0].information.expenses;
+    const nassests = (assests || 0)+getData[0].information.assests;
+    const nfixed_income = (fixed_income || 0)+ getData[0].information.fixed_income;
+    const nliabilities = (liabilities || 0)+ getData[0].information.liabilities;
+    const nexpenses = (expenses || 0)+ getData[0].information.expenses;
     const nequity = (nassests+nfixed_income)-(nliabilities+nexpenses);
     try{
         const update = await FinanceData.updateOne({
@@ -92,14 +91,7 @@ const updateData = async(key,{name:name,assests:assests,fixed_income:fixed_incom
             name:nname,
             login:getData.login,
             key:getData.key,
-            pnl:[{
-                year:getData.pnl[0].year,
-                month:getData.pnl[0].month,
-                data:{
-                    income : nfixed_income,
-                    expenses: nexpenses
-                }
-            }],
+            pnl:getData[0].pnl,
             information:{
 	            equity:nequity,
 	            assests:nassests,
@@ -108,8 +100,10 @@ const updateData = async(key,{name:name,assests:assests,fixed_income:fixed_incom
 	            expenses: nexpenses,
 	        }
         })
+        return update;
     }catch(err){
         console.log(err);
+        return {matchedCount : 0}
     }
 }
 
